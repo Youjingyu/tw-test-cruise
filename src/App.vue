@@ -1,28 +1,37 @@
 <template>
   <div id="app">
     <Header :isLogined="true"/>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/> -->
+    <main class="main">
+      <SideBar class="sidebar"/>
+      <Console class="console"/>
+    </main>
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
+import SideBar from './containers/SideBar'
+import Console from './containers/Console'
 
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    SideBar,
+    Console
   }
 }
 </script>
 
 <style lang="scss">
-  #app {
-    // width: 1200px;
-    // margin: 0 auto;
+  .main {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .sidebar {
+    float: left;
+  }
+  .console {
+    float: right;
   }
 </style>
