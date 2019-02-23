@@ -1,0 +1,20 @@
+// color
+$Indigo: #00B4CF;
+$DarkenIndigo: #01869A;
+$Orange: #FF9A2A;
+$Green: #7FBC39;
+$White: #FFF;
+$Grey: #F3F3F3;
+$DarkenGrey: #E1E4E6;
+$DarkestGrey: #ccc;
+
+// size
+$BaseHeight: 50px;
+
+@function size($length) {
+  // 由于部分尺寸没有标注
+  // 因此结合标注的部分，根据比例计算未知部分的尺寸
+  // $BaseHeight 为标注的 tab 栏目（搜索框所在的栏）的高度
+  // 80 为 macbook-pro 预览 app 打开设计图并放大 3 倍后 tab 栏所占的屏幕像素
+  @return ($length / 80) * $BaseHeight;
+}

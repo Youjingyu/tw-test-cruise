@@ -83,7 +83,6 @@ export default {
     animation: rotate 2s linear infinite;
   }
   & > h4 {
-    margin: 0;
     position: absolute;
     top: 10px;
     left: 5px;
@@ -108,7 +107,7 @@ export default {
     div {
       flex: 1;
       h5 {
-        margin-bottom: 50px;
+        margin: 20px 0 50px 0;
         font-size: 12px;
         font-weight: normal;
       }

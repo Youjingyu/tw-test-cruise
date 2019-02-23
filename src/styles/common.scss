@@ -5,6 +5,10 @@
    color: #2D4054;
  }
 
+h1, h2, h3, h4, h5 {
+  margin: 0
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -13,6 +17,10 @@ ul {
 
 div, ul, li, input {
   box-sizing: border-box;
+}
+
+i:before {
+  vertical-align: middle;
 }
 
 .clearfix:before,

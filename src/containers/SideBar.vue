@@ -38,6 +38,7 @@ export default {
     color: #fff;
     i {
       margin: 0 10px 0 20px;
+      font-size: 20px;
     }
     .link {
       display: inline-block;
