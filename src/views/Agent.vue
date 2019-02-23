@@ -1,16 +1,19 @@
 <template>
   <div class="agent">
     <Panel/>
+    <ControllTab/>
   </div>
 </template>
 
 <script>
 import Panel from '../components/agent/Panel'
+import ControllTab from '../components/agent/ControllTab'
 
 export default {
   name: 'Agent',
   components: {
-    Panel
+    Panel,
+    ControllTab
   }
 }
 </script>

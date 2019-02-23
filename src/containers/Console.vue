@@ -15,7 +15,6 @@ export default {
 
 <style lang="scss" scoped>
 .console {
-  box-sizing: border-box;
   width: 77.25%;
   padding: 10px 15px;
 }

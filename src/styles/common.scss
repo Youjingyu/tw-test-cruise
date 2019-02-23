@@ -10,3 +10,17 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+div, ul, li, input {
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
