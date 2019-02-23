@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .aside {
-  width: 273px;
+  width: 22.75%;
   background-color: #2d4054;
 }
 .menu {
