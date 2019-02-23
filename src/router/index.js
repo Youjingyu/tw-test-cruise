@@ -24,7 +24,7 @@ export default new Router({
         title: 'MY CRUISE',
         icon: 'icon-boat'
       },
-      component: () => import(/* webpackChunkName: "about" */ '../views/MyCruise.vue')
+      component: () => import(/* webpackChunkName: "myCruise" */ '../views/MyCruise.vue')
     },
     {
       path: '/help',
@@ -33,7 +33,7 @@ export default new Router({
         title: 'HELP',
         icon: 'icon-life-bouy'
       },
-      component: () => import(/* webpackChunkName: "about" */ '../views/Help.vue')
+      component: () => import(/* webpackChunkName: "help" */ '../views/Help.vue')
     }
   ]
 })
