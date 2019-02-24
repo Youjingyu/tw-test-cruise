@@ -1,39 +1,27 @@
-# tw-test
+## Cruise
 
-## Project setup
-```
-yarn install
-```
+### 使用
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+首先，启动 mock-server（这一步可以跳过，没有 mock-server，页面只是没有数据）：
 
-### Compiles and minifies for production
-```
-yarn run build
+```bash
+# 在项目根目录下执行
+npx json-server --watch ./mock-server/db.json --port 3001
 ```
 
-### Run your tests
-```
-yarn run test
+用浏览器打开 `./dist/index.html` 即可。
+
+### dev 预览
+
+```bash
+# 安装依赖
+yarn
+# 启动服务
+yarn serve
 ```
 
-### Lints and fixes files
-```
-yarn run lint
-```
+### build
 
-### Run your end-to-end tests
+```bash
+yarn build
 ```
-yarn run test:e2e
-```
-
-### Run your unit tests
-```
-yarn run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
