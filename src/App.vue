@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header :isLogined="true"/>
-    <main class="main">
+    <Header :isLogined="true" class="header"/>
+    <main class="main clearfix">
       <SideBar class="sidebar"/>
       <Console class="console"/>
     </main>
@@ -24,14 +24,24 @@ export default {
 </script>
 
 <style lang="scss">
-  .main {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  .sidebar {
-    float: left;
-  }
-  .console {
-    float: right;
-  }
+@import './styles/variable.scss';
+#app {
+  position: relative;
+  height: 100vh;
+}
+.header {
+  position: absolute;
+}
+.main {
+  margin: 0 auto;
+  padding-top: $HeaderHeight;
+  width: 1200px;
+  height: 100%;
+}
+.sidebar {
+  float: left;
+}
+.console {
+  float: right;
+}
 </style>

@@ -12,13 +12,18 @@
         </router-link>
       </li>
     </ul>
+    <History class="history"/>
   </aside>
 </template>
 
 <script>
+import History from '../components/History'
+
 export default {
   name: 'SideBar',
-  components: {}
+  components: {
+    History
+  }
 }
 </script>
 
@@ -26,7 +31,9 @@ export default {
 @import '../styles/variable.scss';
 
 .aside {
+  position: relative;
   width: 22.75%;
+  height: 100%;
   padding: size(22) 0;
   background-color: #2d4054;
 }
@@ -55,5 +62,10 @@ export default {
       color: #01869a;
     }
   }
+}
+.history {
+  position: absolute;
+  bottom: size(20);
+  width: 100%;
 }
 </style>

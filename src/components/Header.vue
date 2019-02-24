@@ -26,7 +26,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../styles/variable.scss';
+
 .header {
+  height: $HeaderHeight;
+  width: 100%;
   background-color: #fff;
   text-align: center;
   box-shadow: 0 1px 6px -2px rgba(32, 33, 36, 0.28);
