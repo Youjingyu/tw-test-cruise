@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["myCruise"],{7277:function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("h2",[e._v("Dashboard")])},u=[],l=t("2877"),s={},a=Object(l["a"])(s,r,u,!1,null,null,null);n["default"]=a.exports},f0a6:function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("h2",[e._v("MyCruise")])},u=[],l=t("2877"),s={},a=Object(l["a"])(s,r,u,!1,null,null,null);n["default"]=a.exports}}]);
+//# sourceMappingURL=myCruise.bdedd89a.js.map
