@@ -18,10 +18,14 @@
         </div>
         <div>
           <div class="resource-add">
-            <button class="resource-add-btn">
+            <button class="resource-add-btn" @click="showDialog(i)">
               <i class="icon-plus"></i>
             </button>
-            <Dialog class="resource-add-dialog" v-show="false"/>
+            <Dialog
+              data-component-name="dialog"
+              class="resource-add-dialog"
+              v-show="dialogIndex === i"
+            />
           </div>
           <div v-for="(resourceItem, i) in item.resources"  :key="i" class="resource-item">
             <span>{{resourceItem}}</span>
@@ -57,6 +61,7 @@ export default {
   name: 'AgentMachineList',
   data () {
     return {
+      dialogIndex: undefined
     }
   },
   props: {
@@ -67,6 +72,16 @@ export default {
       }
     }
   },
+  created () {
+    document.body.addEventListener('click', (e) => {
+      let el = e.target
+      while (el) {
+        if (el.getAttribute && el.getAttribute('data-component-name') === 'dialog') return
+        el = el.parentNode
+      }
+      this.hideDialog()
+    })
+  },
   components: {
     Dialog
   },
@@ -75,6 +90,17 @@ export default {
       return this.machineList.map((item) => {
         item.osIcon = os2IconMap[item.os]
         return item
+      })
+    }
+  },
+  methods: {
+    hideDialog (i) {
+      this.dialogIndex = undefined
+    },
+    showDialog (i) {
+      // delayed execution after hideDialog
+      setTimeout(() => {
+        this.dialogIndex = i
       })
     }
   }
