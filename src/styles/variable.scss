@@ -20,3 +20,5 @@ $BaseHeight: 50px;
   // 80 为 macbook-pro 预览 app 打开设计图（Desktop HD.png）并放大 3 倍后 tab 栏所占的屏幕像素
   @return ($length / 80) * $BaseHeight;
 }
+
+$HeaderHeight: size(106);

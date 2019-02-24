@@ -1,4 +1,4 @@
- body {
+body {
    background-color: rgb(243, 243, 243);
    font-family: Avenir,Helvetica,Arial,sans-serif;
    font-size: 14px;
@@ -15,7 +15,7 @@ ul {
   list-style: none;
 }
 
-div, ul, li, input {
+main, aside, header, div, ul, li, input {
   box-sizing: border-box;
 }
 
