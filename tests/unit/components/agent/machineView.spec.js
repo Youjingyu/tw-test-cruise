@@ -32,6 +32,16 @@ describe('agent/ControlTab.vue', () => {
     expect(wrapper.vm.filteredMachineList.length).to.eql(0)
     expect(wrapper.vm.filterType).to.eql(2)
   })
+  it('should filter list when search event is emitted', () => {
+    const wrapper = shallowMount(MachineView, {
+      propsData: {
+        machineList: [mockData, mockData, mockData]
+      }
+    })
+
+    wrapper.find(ControlTab).vm.$emit('search', '02')
+    expect(wrapper.vm.filteredMachineList.length).to.eql(0)
+  })
   it('should emit event', () => {
     const wrapper = shallowMount(MachineView, {
       propsData: {

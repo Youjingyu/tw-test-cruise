@@ -5,6 +5,7 @@
       :filterType="filterType"
       :viewStyle="viewStyle"
       @switchTab="switchTab"
+      @search="search"
     />
     <MachineList
       :machineList="filteredMachineList"
@@ -66,6 +67,16 @@ export default {
     switchTab (type) {
       this.filterType = type
       this.filterMachineList(this.machineList)
+    },
+    search (keyword) {
+      if (keyword === '') {
+        this.filteredMachineList = this.machineList
+        return
+      }
+      const reg = new RegExp(keyword)
+      this.filteredMachineList = this.machineList.filter(item => {
+        return reg.test(item.name)
+      })
     }
   }
 }

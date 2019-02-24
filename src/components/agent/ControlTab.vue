@@ -6,8 +6,8 @@
       <li :class="filterType === 2 ? 'active' : ''" @click="switchTab(2)">Virtual</li>
     </ul>
     <div class="search">
-      <i class="icon-search"></i>
-      <input type="text">
+      <i class="icon-search" @click="search"></i>
+      <input type="text" v-model="keyword" @keyup.enter="search">
     </div>
     <div class="view-style-icon">
       <i class="icon-th-card" :class="viewStyle === 0 ? 'active' : ''"></i>
@@ -19,6 +19,11 @@
 <script>
 export default {
   name: 'AgentControlTab',
+  data () {
+    return {
+      keyword: ''
+    }
+  },
   props: {
     filterType: {
       type: Number,
@@ -34,6 +39,10 @@ export default {
       if (this.filterType !== type) {
         this.$emit('switchTab', type)
       }
+    },
+    search () {
+      const keyword = this.keyword
+      this.$emit('search', keyword)
     }
   }
 }
