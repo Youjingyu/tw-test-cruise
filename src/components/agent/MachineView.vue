@@ -4,6 +4,7 @@
       class="controll-tab"
       :filterType="filterType"
       :viewStyle="viewStyle"
+      @switchTab="switchTab"
     />
     <MachineList
       :machineList="filteredMachineList"
@@ -40,20 +41,20 @@ export default {
   },
   watch: {
     machineList (list) {
-      this.filteredMachineList = this.filterMachineList(list)
+      this.filterMachineList(list)
     }
   },
   methods: {
     filterMachineList (data) {
       // filter machine list by filterType
       const filterType = this.filterType
-      return data.filter(item => {
+      this.filteredMachineList = data.filter(item => {
         // ALL
         if (filterType === 0) return true
         // Physical
         if (filterType === 1) return item.type === 'physical'
         // Virtual
-        if (filterType === 1) return item.type === 'virtual'
+        if (filterType === 2) return item.type === 'virtual'
       })
     },
     addResource (index, resourceArr) {
@@ -61,6 +62,10 @@ export default {
     },
     deleteResource (index, resourceIndex) {
       this.$emit('deleteResource', index, resourceIndex)
+    },
+    switchTab (type) {
+      this.filterType = type
+      this.filterMachineList(this.machineList)
     }
   }
 }

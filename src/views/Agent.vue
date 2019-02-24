@@ -46,7 +46,7 @@ export default {
         else if (item.type === 'virtual') panelData.virtual++
 
         if (item.status === 'building') panelData.building++
-        else if (item.status === 'idle') panelData.building++
+        else if (item.status === 'idle') panelData.idle++
       })
       this.panelData = panelData
     },

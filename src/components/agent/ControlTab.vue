@@ -1,9 +1,9 @@
 <template>
   <div class="controll-tab clearfix">
     <ul class="tab">
-      <li :class="filterType === 0 ? 'active' : ''">All</li>
-      <li :class="filterType === 1 ? 'active' : ''">Physical</li>
-      <li :class="filterType === 2 ? 'active' : ''">Virtual</li>
+      <li :class="filterType === 0 ? 'active' : ''" @click="switchTab(0)">All</li>
+      <li :class="filterType === 1 ? 'active' : ''" @click="switchTab(1)">Physical</li>
+      <li :class="filterType === 2 ? 'active' : ''" @click="switchTab(2)">Virtual</li>
     </ul>
     <div class="search">
       <i class="icon-search"></i>
@@ -27,6 +27,13 @@ export default {
     viewStyle: {
       type: Number,
       default: 1
+    }
+  },
+  methods: {
+    switchTab (type) {
+      if (this.filterType !== type) {
+        this.$emit('switchTab', type)
+      }
     }
   }
 }
