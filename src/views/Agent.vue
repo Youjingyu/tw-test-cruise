@@ -1,7 +1,7 @@
 <template>
   <div class="agent">
     <Panel/>
-    <ControllTab/>
+    <ControllTab class="controll-tab"/>
     <MachineList/>
   </div>
 </template>
@@ -22,7 +22,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variable.scss';
+
 .agent {
-  width: 100%
+  width: 100%;
+  .controll-tab {
+    margin: size(26) 0 size(30) 0;
+  }
 }
 </style>

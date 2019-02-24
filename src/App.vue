@@ -28,6 +28,7 @@ export default {
 #app {
   position: relative;
   height: 100vh;
+  min-width: 1200px;
 }
 .header {
   position: absolute;

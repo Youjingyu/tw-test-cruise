@@ -99,6 +99,7 @@ export default {
 @import '../../styles/variable.scss';
 
 .machine-list-item {
+  margin-bottom: size(26);
   padding: size(22) size(18);
   background-color: $White;
   .os-icon {
