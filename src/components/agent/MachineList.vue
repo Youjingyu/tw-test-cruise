@@ -145,12 +145,11 @@ export default {
     }
     .resource-add-dialog {
       position: absolute;
-      left: size(-13);
-      top: size(58)
+      left: size(-10);
+      top: size(68)
     }
     .resource-add-btn {
-      position: relative;
-      padding: 0 size(8);
+      padding: size(5) size(10);
       border: none;
       color: $White;
       background-color: $Indigo;
