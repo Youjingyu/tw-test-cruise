@@ -9,6 +9,15 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '/dashboard',
+      name: 'dashboard',
+      meta: {
+        title: 'DASHBOARD',
+        icon: 'icon-dashboard'
+      },
+      component: () => import(/* webpackChunkName: "myCruise" */ '../views/Dashboard.vue')
+    },
+    {
       path: '/',
       name: 'agent',
       meta: {

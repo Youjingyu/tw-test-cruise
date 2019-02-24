@@ -1,10 +1,6 @@
 <template>
   <aside class="aside">
     <ul class="menu">
-      <li>
-        <i class="icon-dashboard"></i>
-        <span>DASHBOARD</span>
-      </li>
       <li
         v-for="(route, i) in $router.options.routes"
         :key="i"
@@ -27,8 +23,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variable.scss';
+
 .aside {
   width: 22.75%;
+  padding: size(22) 0;
   background-color: #2d4054;
 }
 .menu {
