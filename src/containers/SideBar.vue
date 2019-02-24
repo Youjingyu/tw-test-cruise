@@ -39,6 +39,7 @@ export default {
     i {
       margin: 0 10px 0 20px;
       font-size: 20px;
+      vertical-align: middle;
     }
     .link {
       display: inline-block;

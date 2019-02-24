@@ -66,9 +66,6 @@ export default {
       background-color: #faf9f9;
       color: rgb(148, 147, 147);
     }
-    input:focus {
-      outline: none;
-    }
   }
   .view-style-icon {
     float: right;

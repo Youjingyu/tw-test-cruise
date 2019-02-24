@@ -7,6 +7,8 @@ $White: #FFF;
 $Grey: #F3F3F3;
 $DarkenGrey: #E1E4E6;
 $DarkestGrey: #ccc;
+$Black: #2D4054;
+$LightenBlack: #435466;
 
 // size
 $BaseHeight: 50px;
@@ -15,6 +17,6 @@ $BaseHeight: 50px;
   // 由于部分尺寸没有标注
   // 因此结合标注的部分，根据比例计算未知部分的尺寸
   // $BaseHeight 为标注的 tab 栏目（搜索框所在的栏）的高度
-  // 80 为 macbook-pro 预览 app 打开设计图并放大 3 倍后 tab 栏所占的屏幕像素
+  // 80 为 macbook-pro 预览 app 打开设计图（Desktop HD.png）并放大 3 倍后 tab 栏所占的屏幕像素
   @return ($length / 80) * $BaseHeight;
 }

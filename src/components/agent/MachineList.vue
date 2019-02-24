@@ -17,8 +17,11 @@
           <span class="machine-info">{{item.location}}</span>
         </div>
         <div>
-          <div class="resource-plus-icon">
-            <i class="icon-plus"></i>
+          <div class="resource-add">
+            <button class="resource-add-btn">
+              <i class="icon-plus"></i>
+            </button>
+            <Dialog class="resource-add-dialog"/>
           </div>
           <div v-for="(resourceItem, i) in item.resources"  :key="i" class="resource-item">
             <span>{{resourceItem}}</span>
@@ -40,6 +43,7 @@ import debian from '../../assets/os-icons/debian.png'
 import suse from '../../assets/os-icons/suse.png'
 import ubuntu from '../../assets/os-icons/ubuntu.png'
 import windows from '../../assets/os-icons/windows.png'
+import Dialog from '../Dialog'
 
 const os2IconMap = {
   centos,
@@ -76,7 +80,9 @@ export default {
         }]
       }
     }
-
+  },
+  components: {
+    Dialog
   },
   computed: {
     formattedMachineList () {
@@ -106,6 +112,7 @@ export default {
     .machine-status-line {
       i {
         color: $DarkestGrey;
+        vertical-align: middle;
       }
       margin-bottom: size(45);
     }
@@ -131,11 +138,24 @@ export default {
     .machine-info {
       margin: 0 size(20) 0 size(14);
     }
-    .resource-plus-icon {
+    .resource-add {
       display: inline-block;
+      position: relative;
+    }
+    .resource-add-dialog {
+      position: absolute;
+      left: size(-13);
+      top: size(58)
+    }
+    .resource-add-btn {
+      position: relative;
       padding: 0 size(8);
+      border: none;
       color: $White;
-      background-color: $Indigo
+      background-color: $Indigo;
+      &:hover {
+        background-color: $DarkenIndigo;
+      }
     }
     .resource-item {
       display: inline-block;

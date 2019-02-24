@@ -19,8 +19,8 @@ div, ul, li, input {
   box-sizing: border-box;
 }
 
-i:before {
-  vertical-align: middle;
+button:focus, input:focus {
+  outline: none;
 }
 
 .clearfix:before,
