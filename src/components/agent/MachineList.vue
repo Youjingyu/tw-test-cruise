@@ -5,7 +5,9 @@
       v-for="(item, i) in formattedMachineList"
       :key="i"
       >
-      <img :src="item.osIcon" alt="os-icon" class="os-icon">
+      <div class="os-icon">
+        <img :src="item.osIcon" alt="os-icon">
+      </div>
       <div class="machine-status">
         <div class="machine-status-line">
           <i class="icon-desktop"></i>
@@ -16,7 +18,7 @@
           <i class="icon-folder"></i>
           <span class="machine-info">{{item.location}}</span>
         </div>
-        <div>
+        <div class="machine-status-line2">
           <div class="resource-add">
             <button class="resource-add-btn" @click="showDialog(i)">
               <i class="icon-plus"></i>
@@ -24,17 +26,23 @@
             <Dialog
               data-component-name="dialog"
               class="resource-add-dialog"
+              @close="hideDialog"
+              @addResource="addResource(i, arguments[0])"
               v-show="dialogIndex === i"
             />
           </div>
-          <div v-for="(resourceItem, i) in item.resources"  :key="i" class="resource-item">
-            <span>{{resourceItem}}</span>
-            <i class="icon-trash"></i>
+          <div class="resource">
+            <div v-for="(resourceItem, resourceIndex) in item.resources"  :key="resourceIndex" class="resource-item">
+              <span>{{resourceItem}}</span>
+              <i class="icon-trash" @click="deleteResource(i, resourceIndex)"></i>
+            </div>
           </div>
-          <button class="machine-deny" v-show="item.status === 'building'">
-            <i class="icon-deny"></i>
-            Deny
-          </button>
+          <div class="machine-deny">
+            <button v-show="item.status === 'building'">
+              <i class="icon-deny"></i>
+              Deny
+            </button>
+          </div>
         </div>
       </div>
     </li>
@@ -102,6 +110,12 @@ export default {
       setTimeout(() => {
         this.dialogIndex = i
       })
+    },
+    addResource (index, resourceArr) {
+      this.$emit('addResource', index, resourceArr)
+    },
+    deleteResource (index, resourceIndex) {
+      this.$emit('deleteResource', index, resourceIndex)
     }
   }
 }
@@ -114,13 +128,15 @@ export default {
   margin-bottom: size(26);
   padding: size(22) size(18);
   background-color: $White;
+  display: flex;
   .os-icon {
-    float: left;
-    margin-right: size(35);
-    width: 80px;
+    flex: 1;
+    img {
+      width: 80px;
+    }
   }
   .machine-status {
-    float: left;
+    flex: 8;
     font-size: 16px;
     .machine-status-line {
       i {
@@ -151,8 +167,12 @@ export default {
     .machine-info {
       margin: 0 size(20) 0 size(14);
     }
+
+    .machine-status-line2 {
+      display: flex;
+    }
     .resource-add {
-      display: inline-block;
+      flex: 0.5;
       position: relative;
     }
     .resource-add-dialog {
@@ -172,9 +192,13 @@ export default {
         vertical-align: middle;
       }
     }
+    .resource {
+      flex: 10;
+    }
     .resource-item {
       display: inline-block;
-      margin-left: size(10);
+      margin-right: size(10);
+      margin-bottom: size(10);
       padding: size(5) size(10);
       background-color: $Grey;
       i {
@@ -182,13 +206,16 @@ export default {
       }
     }
     .machine-deny {
-      float: right;
-      padding: size(8) size(14);
-      border: none;
-      color: $White;
-      background-color: $Indigo;
-      &:hover {
-        background-color: $DarkenIndigo;
+      flex: 1.5;
+      text-align: right;
+      button {
+        padding: size(8) size(14);
+        border: none;
+        color: $White;
+        background-color: $Indigo;
+        &:hover {
+          background-color: $DarkenIndigo;
+        }
       }
     }
   }

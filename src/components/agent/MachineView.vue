@@ -5,7 +5,11 @@
       :filterType="filterType"
       :viewStyle="viewStyle"
     />
-    <MachineList :machineList="filteredMachineList"/>
+    <MachineList
+      :machineList="filteredMachineList"
+      @addResource="addResource"
+      @deleteResource="deleteResource"
+    />
   </div>
 </template>
 
@@ -51,6 +55,12 @@ export default {
         // Virtual
         if (filterType === 1) return item.type === 'virtual'
       })
+    },
+    addResource (index, resourceArr) {
+      this.$emit('addResource', index, resourceArr)
+    },
+    deleteResource (index, resourceIndex) {
+      this.$emit('deleteResource', index, resourceIndex)
     }
   }
 }

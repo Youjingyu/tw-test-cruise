@@ -1,12 +1,17 @@
 <template>
   <div class="dialog arrow">
     <span>Seperate multiple resource name with commas</span>
-    <input type="text" placeholder="Input value">
+    <input
+      type="text"
+      placeholder="Input value"
+      v-model="resources"
+      @keyup.enter="addResource"
+    >
     <div>
-      <button class="add-resource">Add Resource</button>
-      <button class="cancel">Cancel</button>
+      <button class="add-resource" @click="addResource">Add Resource</button>
+      <button class="cancel" @click="close">Cancel</button>
     </div>
-    <i class="icon-close"></i>
+    <i class="icon-close" @click="close"></i>
     <svg class="arrow" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 15 L7.5 0 L15 15" stroke="#00B4CF" fill="#fff"></path>
     </svg>
@@ -15,7 +20,24 @@
 
 <script>
 export default {
-  name: 'Dialog'
+  name: 'Dialog',
+  data () {
+    return {
+      resources: ''
+    }
+  },
+  methods: {
+    close () {
+      this.$emit('close')
+      this.resources = ''
+    },
+    addResource () {
+      const resourceArr = this.resources.split(/\s*;\s*/).filter(item => item !== '')
+      if (resourceArr.length === 0) return
+      this.close()
+      this.$emit('addResource', resourceArr)
+    }
+  }
 }
 </script>
 

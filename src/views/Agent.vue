@@ -1,7 +1,11 @@
 <template>
   <div class="agent">
     <Panel :panelData="panelData"/>
-    <MachineView :machineList="machineList" />
+    <MachineView
+      :machineList="machineList"
+      @addResource="addResource"
+      @deleteResource="deleteResource"
+    />
   </div>
 </template>
 
@@ -53,6 +57,24 @@ export default {
         physical: 0,
         virtual: 0
       }
+    },
+    addResource (index, resourceArr) {
+      const agentData = { ...this.machineList[index] }
+      agentData.resources = agentData.resources.concat(resourceArr)
+      this.putAgent(index, agentData)
+    },
+    deleteResource (index, resourceIndex) {
+      const agentData = { ...this.machineList[index] }
+      agentData.resources.splice(resourceIndex, 1)
+      this.putAgent(index, agentData)
+    },
+    putAgent (index, agentData) {
+      api.putAgent(agentData.id, agentData).then(() => {
+        this.machineList.splice(index, 1, agentData)
+      }).catch((err) => {
+        // TODO handle error
+        console.log(err)
+      })
     }
   }
 }
