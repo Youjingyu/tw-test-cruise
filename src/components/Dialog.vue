@@ -3,7 +3,7 @@
     <span>Seperate multiple resource name with commas</span>
     <input
       type="text"
-      placeholder="Input value"
+      placeholder="e.g. Chrome,Firefox"
       v-model="resources"
       @keyup.enter="addResource"
     >
@@ -57,6 +57,7 @@ export default {
     height: size(55);
     border: 1px solid $Black;
     border-radius: 3px;
+    color: $Indigo;
     text-indent: size(20);
   }
   button {

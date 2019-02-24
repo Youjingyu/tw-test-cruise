@@ -35,7 +35,7 @@ export default {
   width: 22.75%;
   height: 100%;
   padding: size(22) 0;
-  background-color: #2d4054;
+  background-color: $Black;
 }
 .menu {
   li {
@@ -43,9 +43,9 @@ export default {
     line-height: 45px;
     color: #fff;
     i {
-      margin: 0 10px 0 20px;
+      margin: 0 size(26) 0 size(48);
       font-size: 20px;
-      vertical-align: middle;
+      vertical-align: sub;
     }
     .link {
       display: inline-block;
@@ -56,10 +56,10 @@ export default {
     }
   }
   li.active {
-    color: #01869a;
-    background-color: #435466;
+    color: $DarkenIndigo;
+    background-color: $LightenBlack;
     .link {
-      color: #01869a;
+      color: $DarkenIndigo;
     }
   }
 }

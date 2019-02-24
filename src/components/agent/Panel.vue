@@ -47,6 +47,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/variable.scss';
+
 @keyframes rotate {
   0%{ transform: rotate(0deg);}
   50%{ transform: rotate(180deg);}
@@ -64,7 +66,7 @@ export default {
   font-weight: bold;
   font-size: 18px;
   text-align: center;
-  color: #fff;
+  color: $White;
   & > i {
     font-size: 144px;
     opacity: 0.2;
@@ -75,30 +77,30 @@ export default {
   }
   & > h4 {
     position: absolute;
-    top: 10px;
-    left: 5px;
+    top: size(24);
+    left: size(14);
   }
   & > span {
     font-size: 48px;
     position: absolute;
-    right: 15px;
-    bottom: 15px;
+    right: size(36);
+    bottom: size(32);
   }
   &.building {
-    background-color: #FF9A2A;
+    background-color: $Orange;
   }
   &.idle {
-    margin: 0 20px;
+    margin: 0 size(40);
     background-color: #7FBC39;
   }
   &.status-summary {
     display: flex;
-    color: #2D4054;
-    background-color: #fff;
+    color: $Black;
+    background-color: $White;
     div {
       flex: 1;
       h5 {
-        margin: 20px 0 50px 0;
+        margin: size(44) 0 size(64) 0;
         font-size: 12px;
         font-weight: normal;
       }

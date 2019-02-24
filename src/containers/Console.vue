@@ -14,8 +14,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variable.scss';
+
 .console {
-  padding: 10px 15px;
+  padding: size(28) size(46);
   width: 77.25%;
   height: 100%;
   overflow: auto;

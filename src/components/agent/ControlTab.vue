@@ -40,21 +40,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/variable.scss';
+
 .controll-tab {
   height: 50px;
-  background-color: #fff;
+  background-color: $White;
   .tab {
     line-height: 47px;
     li {
       float: left;
-      width: 82px;
-      border-right: 1px solid rgb(228, 228, 228);
-      border-bottom: 3px solid #fff;
+      width: size(124);
+      border-right: 1px solid $Grey;
+      border-bottom: 3px solid $White;
       font-weight: lighter;
       text-align: center;
     }
     li.active {
-      border-bottom-color: #00b4cf;
+      border-bottom-color: $Indigo;
     }
   }
   .search {
@@ -63,7 +65,7 @@ export default {
     margin-left: 20px;
     margin-top: 10px;
     font-size: 20px;
-    color: rgb(148, 147, 147);
+    color: $DarkestGrey;
     .icon-search {
       position: absolute;
       left: 8px;
@@ -85,7 +87,7 @@ export default {
       margin-right: 10px;
     }
     i.active {
-      color: #00b4cf;
+      color: $Indigo;
     }
   }
 }
