@@ -17,9 +17,8 @@
 </template>
 
 <script>
-
 export default {
-  name: 'AgentControllTab',
+  name: 'AgentControlTab',
   data () {
     return {
       activeIndex: 0,
@@ -43,8 +42,8 @@ export default {
       font-weight: lighter;
       text-align: center;
     }
-    li.active{
-      border-bottom-color: #00B4CF;
+    li.active {
+      border-bottom-color: #00b4cf;
     }
   }
   .search {
@@ -75,7 +74,7 @@ export default {
       margin-right: 10px;
     }
     i.active {
-      color: #00B4CF;
+      color: #00b4cf;
     }
   }
 }
