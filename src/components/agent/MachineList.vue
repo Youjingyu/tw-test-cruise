@@ -27,7 +27,7 @@
             <span>{{resourceItem}}</span>
             <i class="icon-trash"></i>
           </div>
-          <button class="machine-deny">
+          <button class="machine-deny" v-show="item.status === 'building'">
             <i class="icon-deny"></i>
             Deny
           </button>
