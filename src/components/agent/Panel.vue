@@ -10,19 +10,19 @@
       <h4>Idle</h4>
       <span>{{panelData.idle}}</span>
     </div>
-    <div class="status-panel status-sumary">
-        <div>
-          <h5>ALL</h5>
-          <span>{{panelData.physical + panelData.virtual}}</span>
-        </div>
-        <div>
-          <h5>PHYSICAL</h5>
-          <span>{{panelData.physical}}</span>
-        </div>
-        <div>
-          <h5>VIRTUAL</h5>
-          <span>{{panelData.virtual}}</span>
-        </div>
+    <div class="status-panel status-summary">
+      <div>
+        <h5>ALL</h5>
+        <span>{{panelData.physical + panelData.virtual}}</span>
+      </div>
+      <div>
+        <h5>PHYSICAL</h5>
+        <span>{{panelData.physical}}</span>
+      </div>
+      <div>
+        <h5>VIRTUAL</h5>
+        <span>{{panelData.virtual}}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -91,7 +91,7 @@ export default {
     margin: 0 20px;
     background-color: #7FBC39;
   }
-  &.status-sumary {
+  &.status-summary {
     display: flex;
     color: #2D4054;
     background-color: #fff;

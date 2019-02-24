@@ -2,7 +2,7 @@
   <div id="app">
     <Header :isLogined="true" class="header"/>
     <main class="main clearfix">
-      <SideBar class="sidebar"/>
+      <Sidebar class="sidebar"/>
       <Console class="console"/>
     </main>
   </div>
@@ -10,14 +10,14 @@
 
 <script>
 import Header from './components/Header'
-import SideBar from './containers/SideBar'
+import Sidebar from './containers/Sidebar'
 import Console from './containers/Console'
 
 export default {
   name: 'app',
   components: {
     Header,
-    SideBar,
+    Sidebar,
     Console
   }
 }

@@ -20,7 +20,7 @@
 import History from '../components/History'
 
 export default {
-  name: 'SideBar',
+  name: 'Sidebar',
   components: {
     History
   }
