@@ -15,7 +15,9 @@ export default {
 
 <style lang="scss" scoped>
 .console {
-  width: 77.25%;
   padding: 10px 15px;
+  width: 77.25%;
+  height: 100%;
+  overflow: auto;
 }
 </style>

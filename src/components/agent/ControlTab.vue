@@ -1,17 +1,17 @@
 <template>
   <div class="controll-tab clearfix">
     <ul class="tab">
-      <li :class="activeIndex === 0 ? 'active' : ''">All</li>
-      <li :class="activeIndex === 1 ? 'active' : ''">Physical</li>
-      <li :class="activeIndex === 2 ? 'active' : ''">Virtual</li>
+      <li :class="filterType === 0 ? 'active' : ''">All</li>
+      <li :class="filterType === 1 ? 'active' : ''">Physical</li>
+      <li :class="filterType === 2 ? 'active' : ''">Virtual</li>
     </ul>
     <div class="search">
       <i class="icon-search"></i>
       <input type="text">
     </div>
     <div class="view-style-icon">
-      <i class="icon-th-card" :class="activeViewStyle === 0 ? 'active' : ''"></i>
-      <i class="icon-th-list" :class="activeViewStyle === 1 ? 'active' : ''"></i>
+      <i class="icon-th-card" :class="viewStyle === 0 ? 'active' : ''"></i>
+      <i class="icon-th-list" :class="viewStyle === 1 ? 'active' : ''"></i>
     </div>
   </div>
 </template>
@@ -19,10 +19,14 @@
 <script>
 export default {
   name: 'AgentControlTab',
-  data () {
-    return {
-      activeIndex: 0,
-      activeViewStyle: 1
+  props: {
+    filterType: {
+      type: Number,
+      default: 0
+    },
+    viewStyle: {
+      type: Number,
+      default: 1
     }
   }
 }

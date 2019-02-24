@@ -1,0 +1,65 @@
+<template>
+  <div>
+    <ControlTab
+      class="controll-tab"
+      :filterType="filterType"
+      :viewStyle="viewStyle"
+    />
+    <MachineList :machineList="filteredMachineList"/>
+  </div>
+</template>
+
+<script>
+import ControlTab from './ControlTab'
+import MachineList from './MachineList'
+
+export default {
+  name: 'AgentMachineVie',
+  data () {
+    return {
+      filterType: 0,
+      viewStyle: 1,
+      filteredMachineList: []
+    }
+  },
+  components: {
+    ControlTab,
+    MachineList
+  },
+  props: {
+    machineList: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
+  },
+  watch: {
+    machineList (list) {
+      this.filteredMachineList = this.filterMachineList(list)
+    }
+  },
+  methods: {
+    filterMachineList (data) {
+      // filter machine list by filterType
+      const filterType = this.filterType
+      return data.filter(item => {
+        // ALL
+        if (filterType === 0) return true
+        // Physical
+        if (filterType === 1) return item.type === 'physical'
+        // Virtual
+        if (filterType === 1) return item.type === 'virtual'
+      })
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import '../../styles/variable.scss';
+
+.controll-tab {
+  margin: size(26) 0 size(30) 0;
+}
+</style>

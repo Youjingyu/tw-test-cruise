@@ -21,7 +21,7 @@
             <button class="resource-add-btn">
               <i class="icon-plus"></i>
             </button>
-            <Dialog class="resource-add-dialog"/>
+            <Dialog class="resource-add-dialog" v-show="false"/>
           </div>
           <div v-for="(resourceItem, i) in item.resources"  :key="i" class="resource-item">
             <span>{{resourceItem}}</span>
@@ -63,21 +63,7 @@ export default {
     machineList: {
       type: Array,
       default () {
-        return [{
-          'name': 'bjstdmngbdr01.thoughtworks.com',
-          'os': 'windows',
-          'status': 'idle',
-          'type': 'physical',
-          'ip': '192.168.1.102',
-          'location': '/var/lib/cruise-agent',
-          'resources': [
-            'Firefox',
-            'Safari',
-            'Ubuntu',
-            'Chrome'
-          ],
-          'id': 1
-        }]
+        return []
       }
     }
   },
@@ -155,6 +141,9 @@ export default {
       background-color: $Indigo;
       &:hover {
         background-color: $DarkenIndigo;
+      }
+      i {
+        vertical-align: middle;
       }
     }
     .resource-item {

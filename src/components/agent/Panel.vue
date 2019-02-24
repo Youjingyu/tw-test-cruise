@@ -3,25 +3,25 @@
     <div class="status-panel building">
       <i class="icon-cog"></i>
       <h4>Building</h4>
-      <span>{{building}}</span>
+      <span>{{panelData.building}}</span>
     </div>
     <div class="status-panel idle">
       <i class="icon-coffee"></i>
       <h4>Idle</h4>
-      <span>{{idle}}</span>
+      <span>{{panelData.idle}}</span>
     </div>
     <div class="status-panel status-sumary">
         <div>
           <h5>ALL</h5>
-          <span>{{all}}</span>
+          <span>{{panelData.physical + panelData.virtual}}</span>
         </div>
         <div>
           <h5>PHYSICAL</h5>
-          <span>{{physical}}</span>
+          <span>{{panelData.physical}}</span>
         </div>
         <div>
           <h5>VIRTUAL</h5>
-          <span>{{virtual}}</span>
+          <span>{{panelData.virtual}}</span>
         </div>
     </div>
   </div>
@@ -31,25 +31,16 @@
 export default {
   name: 'AgentPanel',
   props: {
-    building: {
-      type: Number,
-      default: 0
-    },
-    idle: {
-      type: Number,
-      default: 0
-    },
-    all: {
-      type: Number,
-      default: 0
-    },
-    physical: {
-      type: Number,
-      default: 0
-    },
-    virtual: {
-      type: Number,
-      default: 0
+    panelData: {
+      type: Object,
+      default () {
+        return {
+          building: 0,
+          idle: 0,
+          physical: 0,
+          virtual: 0
+        }
+      }
     }
   }
 }
