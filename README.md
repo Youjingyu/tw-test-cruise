@@ -2,14 +2,16 @@
 
 ### 使用
 
-首先，启动 mock-server（这一步可以跳过，没有 mock-server，页面只是没有数据）：
+1.启动 mock-server
 
 ```bash
 # 在项目根目录下执行
 npx json-server --watch ./mock-server/db.json --port 3001
 ```
 
-用浏览器打开 `./dist/index.html` 即可。
+这一步可以跳过，没有 mock-server，页面只是没有数据
+
+2.用浏览器打开 `./dist/index.html`
 
 ### dev 预览
 
