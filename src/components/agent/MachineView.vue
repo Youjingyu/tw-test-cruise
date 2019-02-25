@@ -1,3 +1,11 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview combine control tab and machine list
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <div>
     <ControlTab
@@ -69,6 +77,7 @@ export default {
       this.filterMachineList(this.machineList)
     },
     search (keyword) {
+      // filter machine list by the search keyword
       if (keyword === '') {
         this.filteredMachineList = this.machineList
         return

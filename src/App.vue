@@ -1,3 +1,11 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview app component
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <div id="app">
     <Header :isLogined="true" class="header"/>

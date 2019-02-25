@@ -1,3 +1,12 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview main view of the page
+ * display route page
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <div class="console">
     <router-view></router-view>

@@ -1,3 +1,9 @@
+/**
+ * @author youjingyu
+ * @fileOverview init route
+ * @date 2019-02-23
+ */
+
 import Vue from 'vue'
 import Router from 'vue-router'
 import Agent from '../views/Agent.vue'

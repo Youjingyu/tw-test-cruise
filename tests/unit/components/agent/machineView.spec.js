@@ -20,7 +20,7 @@ const mockData = {
   'id': 1
 }
 
-describe('agent/ControlTab.vue', () => {
+describe('agent/MachineView.vue', () => {
   it('should filter list when switchTab event is emitted', () => {
     const wrapper = shallowMount(MachineView, {
       propsData: {

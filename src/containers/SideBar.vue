@@ -1,3 +1,12 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview sidebar component
+ * combine nav and history component
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <aside class="aside">
     <ul class="menu">

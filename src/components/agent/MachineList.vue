@@ -1,3 +1,11 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview machine list component
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <ul class="machine-list">
     <li
@@ -97,6 +105,7 @@ export default {
   computed: {
     formattedMachineList () {
       return this.machineList.map((item) => {
+        // get os icon by os type
         item.osIcon = os2IconMap[item.os]
         return item
       })

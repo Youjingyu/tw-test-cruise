@@ -1,3 +1,11 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview history component
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <div class="history">
     <h3>History</h3>

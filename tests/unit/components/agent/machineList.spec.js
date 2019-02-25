@@ -19,7 +19,7 @@ const mockData = {
   'id': 1
 }
 
-describe('agent/ControlTab.vue', () => {
+describe('agent/MachineList.vue', () => {
   it('should render correct list', () => {
     const wrapper = shallowMount(MachineList, {
       propsData: {

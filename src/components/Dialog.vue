@@ -1,3 +1,11 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview dialog component
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <div class="dialog arrow">
     <span>Seperate multiple resource name with commas</span>
@@ -32,6 +40,7 @@ export default {
       this.resources = ''
     },
     addResource () {
+      // split resources
       const resourceArr = this.resources.split(/\s*;\s*/).filter(item => item !== '')
       if (resourceArr.length === 0) return
       this.close()

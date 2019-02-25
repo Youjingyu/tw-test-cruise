@@ -1,3 +1,11 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview control tab component
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <div class="controll-tab clearfix">
     <ul class="tab">

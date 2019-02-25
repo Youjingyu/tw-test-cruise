@@ -1,3 +1,11 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview header component
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <header class="header">
     <img class="logo" src="../assets/logo.svg" alt="logo">

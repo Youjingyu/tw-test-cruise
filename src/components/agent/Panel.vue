@@ -1,3 +1,11 @@
+<!--
+/**
+ * @author youjingyu
+ * @fileOverview panel component
+ * @date 2019-02-23
+ */
+-->
+
 <template>
   <div class="panel">
     <div class="status-panel building">
