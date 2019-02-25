@@ -43,6 +43,7 @@ export default {
       })
       .catch(err => {
         // TODO handle error
+        // eslint-disable-next-line
         console.log(err)
       })
   },
@@ -104,6 +105,7 @@ export default {
         this.machineList.splice(index, 1, agentData)
       }).catch((err) => {
         // TODO handle error
+        // eslint-disable-next-line
         console.log(err)
       })
     }

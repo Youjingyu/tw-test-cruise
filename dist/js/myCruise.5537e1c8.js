@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["myCruise"],{f0a6:function(e,n,t){"use strict";t.r(n);var u=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("h2",[e._v("MyCruise")])},r=[],s=t("2877"),l={},a=Object(s["a"])(l,u,r,!1,null,null,null);n["default"]=a.exports}}]);
+//# sourceMappingURL=myCruise.5537e1c8.js.map
