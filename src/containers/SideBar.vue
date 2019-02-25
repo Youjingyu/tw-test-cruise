@@ -41,7 +41,7 @@ export default {
   li {
     height: 45px;
     line-height: 45px;
-    color: #fff;
+    color: $White;
     i {
       margin: 0 size(26) 0 size(48);
       font-size: 20px;
@@ -51,7 +51,7 @@ export default {
       display: inline-block;
       width: 100%;
       height: 100%;
-      color: #fff;
+      color: $White;
       text-decoration: none;
     }
   }

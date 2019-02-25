@@ -13,7 +13,7 @@
     </div>
     <i class="icon-close" @click="close"></i>
     <svg class="arrow" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 15 L7.5 0 L15 15" stroke="#00B4CF" fill="#fff"></path>
+      <path d="M0 15 L7.5 0 L15 15" stroke="#00B4CF" fill="#FFF"></path>
     </svg>
   </div>
 </template>

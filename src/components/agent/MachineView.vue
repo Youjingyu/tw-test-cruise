@@ -20,7 +20,7 @@ import ControlTab from './ControlTab'
 import MachineList from './MachineList'
 
 export default {
-  name: 'AgentMachineVie',
+  name: 'AgentMachineView',
   data () {
     return {
       filterType: 0,

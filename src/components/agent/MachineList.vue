@@ -81,6 +81,7 @@ export default {
     }
   },
   created () {
+    // hide dialog when clicking outsie the dialog
     document.body.addEventListener('click', (e) => {
       let el = e.target
       while (el) {

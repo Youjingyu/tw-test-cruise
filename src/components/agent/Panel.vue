@@ -81,17 +81,17 @@ export default {
     left: size(14);
   }
   & > span {
-    font-size: 48px;
     position: absolute;
     right: size(36);
     bottom: size(32);
+    font-size: 48px;
   }
   &.building {
     background-color: $Orange;
   }
   &.idle {
     margin: 0 size(40);
-    background-color: #7FBC39;
+    background-color: $Green;
   }
   &.status-summary {
     display: flex;
