@@ -18,6 +18,14 @@ npx json-server --watch ./mock-server/db.json --port 3001
 yarn
 # 启动服务
 yarn serve
+# 启动 mock-sever
+yarn mock
+```
+
+### 单元测试
+
+```bash
+yarn test:unit
 ```
 
 ### build
