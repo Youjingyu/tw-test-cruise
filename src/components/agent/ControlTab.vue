@@ -71,6 +71,7 @@ export default {
       border-bottom: 3px solid $White;
       font-weight: lighter;
       text-align: center;
+      user-select: none;
     }
     li.active {
       border-bottom-color: $Indigo;

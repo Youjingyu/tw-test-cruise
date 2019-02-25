@@ -80,7 +80,7 @@ export default {
     opacity: 0.2;
   }
   & > .icon-cog {
-    display: block;
+    display: inline-block;
     animation: rotate 2s linear infinite;
   }
   & > h4 {
